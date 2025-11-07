@@ -1,151 +1,75 @@
-# CoffeeShop
+# Coffee Shop Website
 
-### A complete project for managing and analysing a coffee-shop business—sales, inventory, and performance metrics.
+A modern, responsive front-end website for a coffee shop, created using **HTML, CSS, and JavaScript**.
+The project showcases elegant web design, smooth interactivity, and clean UI structure for an online café or coffee business.
 
 ---
 
 ## Overview
 
-The CoffeeShop project provides an integrated solution for tracking operations of a café/coffee-shop business, including sales records, inventory management, customer analytics, and dashboarding. The repository is designed as a portfolio-ready demonstration of full-stack or data-ops capabilities (depending on your stack), showing how business data can inform decision-making.
+The **Coffee Shop Website** is a static, multi-section landing page that presents a coffee brand’s products, menu, customer reviews, and contact information.
+It is designed to demonstrate front-end web development fundamentals including **responsive design**, **CSS animations**, and **JavaScript interactivity**.
 
----
-
-## Objectives
-
-* Build a system to record and manage daily sales, menu items, inventory, and customer feedback.
-* Provide analytics dashboards to visualise key metrics: top‐selling items, inventory turnover, revenue by time period, customer behaviour.
-* Ensure data integrity, smooth workflow from data capture to insights and reporting.
-* Enable future extension into forecasting, dynamic pricing, personalisation, etc.
+This project is ideal for learning or showcasing front-end development skills and can be expanded into a functional e-commerce site.
 
 ---
 
 ## Features
 
-### Core Functionalities
+### 1. Homepage
 
-* Menu/item management: add/remove/edit coffee shop menu items, categories, prices.
-* Sales tracking: capture transactions (item, quantity, time, customer segment).
-* Inventory monitoring: stock levels, restock alerts, turnaround time.
-* Customer analytics: segment customers, repeat visits, favourite items.
-* Dashboard & visualisation: summary stats, charts (daily revenue, item popularity, inventory trends).
+* Hero banner with welcoming text and a call-to-action button.
+* Background image and overlay design emphasizing visual appeal.
 
-### Technical Highlights
+### 2. Navigation Bar
 
-* Built using Python (or your stack: e.g., Flask/Django/Streamlit) for backend and maybe frontend, or a combination of (React/Angular + REST API) if full-stack.
-* Data stored in SQLite/PostgreSQL (or your chosen DB) for portability.
-* Visualisation via Plotly / Power BI / Tableau embedding (depending on repository content).
-* Modular code structure separating data ingestion, business logic, analytics, and UI/reporting.
+* Responsive header with logo and menu links (Home, About, Menu, Products, Review, Contact).
+* Sticky navigation with toggle (hamburger) menu for mobile screens.
+* Search bar and shopping cart icons using **Font Awesome**.
 
----
+### 3. About Section
 
-## System Architecture
+* Split layout with image and content describing the brand’s uniqueness.
+* “Learn more” button for extended details.
 
-```
-+---------------------------------------------+
-|                User Interface               |
-|   (Web app or dashboard for managers)       |
-+------------------------+--------------------+
-                         |
-                         v
-+---------------------------------------------+
-|           Application / Analytics Logic      |
-|   Data ingestion · Business rules · Metrics  |
-+------------------------+--------------------+
-                         |
-                         v
-+---------------------------------------------+
-|             Database / Data Storage          |
-|   Tables: menu_items, sales, inventory,      |
-|           customers, feedback                 |
-+---------------------------------------------+
-```
+### 4. Menu Section
 
----
+* Grid layout displaying multiple coffee menu items (Latte, Cappuccino, Iced Coffee, etc.).
+* Each menu item has price details and an “Add to Cart” button.
 
-## Tech Stack
+### 5. Products Section
 
-| Category             | Technology / Libraries       |
-| -------------------- | ---------------------------- |
-| Programming Language | Python                       |
-| Web Framework / UI   | (Flask / Django / Streamlit) |
-| Database             | SQLite / PostgreSQL          |
-| Data Processing      | pandas, numpy                |
-| Visualisation        | Plotly Express, matplotlib   |
-| Version Control      | Git, GitHub                  |
-| Environment          | Virtual environment (venv)   |
+* Product cards with hover effects, icons (cart, share, favorite), star ratings, and pricing.
+* Demonstrates interactive UI design with Font Awesome icons.
+
+### 6. Customer Reviews
+
+* Customer feedback cards with text, images, and star ratings.
+* Reusable layout demonstrating responsive CSS flex/grid structure.
+
+### 7. Contact Section
+
+* Integrated **Google Maps iframe** for business location.
+* Contact form to collect user name, email, and phone number.
+* Styled input boxes with icons.
+
+### 8. Footer
+
+* Social media icons (Facebook, Twitter, Instagram, LinkedIn, Pinterest).
+* Quick navigation links.
+* Responsive layout matching overall design.
 
 ---
 
-## Installation & Setup
+## Technologies Used
 
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/meg0613/coffeeshop.git
-   cd coffeeshop
-   ```
-2. (Optional) Create a virtual environment:
-
-   ```bash
-   python -m venv venv
-   source venv/bin/activate     # macOS/Linux  
-   venv\Scripts\activate        # Windows
-   ```
-3. Install dependencies:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Set up the database (if applicable):
-
-   ```bash
-   python setup_db.py   # or run script/command defined in project
-   ```
-5. Run the application:
-
-   ```bash
-   python app.py        # or `streamlit run app.py`, or `flask run` depending on stack
-   ```
-6. Access the UI:
-   Open browser at [http://localhost:8501](http://localhost:8501) (or appropriate port).
-
----
-
-## Database Schema & Tables
-
-Description of tables and fields (adjust to your actual schema):
-
-* `menu_items` — item_id, name, category, price, cost, stock_level
-* `sales` — sale_id, item_id, quantity, sale_time, customer_id
-* `inventory` — inventory_id, item_id, stock_in, stock_out, timestamp
-* `customers` — customer_id, name, segment, signup_date
-* `feedback` — feedback_id, customer_id, item_id, rating, comment, timestamp
-
----
-
-## How It Works
-
-1. Menu items are defined and maintained by management.
-2. Sales are recorded in real time, capturing item sold, quantity, timestamp.
-3. Inventory levels are updated with each sale/outflow and restock events.
-4. Dashboards compute key metrics:
-
-   * Daily/weekly/monthly revenue
-   * Top-selling items & categories
-   * Inventory turnover & low-stock alerts
-   * Customer segmentation and favourites
-5. Data export and reporting (optional future extension) for management review.
-
----
-
-## Future Enhancements
-
-* Predictive analytics: forecast demand for items, dynamic pricing.
-* Integration with POS hardware/app and real-time sync.
-* Mobile UI for café staff and remote monitoring by management.
-* Machine-learning customer segmentation and recommendation engine.
-* Cloud deployment (Heroku, AWS, GCP) and multi-store support.
-* Automated restocking alerts via email/SMS.
+| Technology                | Purpose                                            |
+| ------------------------- | -------------------------------------------------- |
+| **HTML5**                 | Page structure and semantic content                |
+| **CSS3**                  | Styling, layout, and animations                    |
+| **JavaScript (Vanilla)**  | Interactivity, menu toggles, and dynamic behavior  |
+| **Font Awesome**          | Icons for navigation, ratings, and UI enhancements |
+| **Google Maps Embed API** | Location embedding in Contact section              |
 
 ---
 
@@ -154,21 +78,69 @@ Description of tables and fields (adjust to your actual schema):
 ```
 coffeeshop/
 │
-├── app.py                   # Main application entry-point  
-├── requirements.txt         # Dependencies  
-├── database_setup.py        # (Optional) DB creation script  
-├── data/                    # Raw/processed CSV datasets  
-├── notebooks/               # Jupyter notebooks (EDA, modelling)  
-├── images/                  # Screenshots, diagram assets  
-├── README.md                # Project documentation  
-└── LICENSE                  # License file
+├── index.html           # Main HTML page (structure and content)
+├── style.css            # CSS file for layout, responsiveness, and styling
+├── script.js            # JavaScript file for interactive features
+├── images/              # Folder for all images and assets (menu, logo, etc.)
+└── README.md            # Project documentation
 ```
 
 ---
 
-## License
+## How to Run the Project
 
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for full terms.
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/meg0613/coffeeshop.git
+   cd coffeeshop
+   ```
+
+2. **Open the project**
+
+   * Locate the `index.html` file.
+   * Double-click it, or open it in your preferred web browser.
+
+3. **(Optional) Run via Live Server (VS Code extension)**
+
+   * Right-click on `index.html` → “Open with Live Server”
+   * The website will open on your local host (e.g., `http://127.0.0.1:5500/`)
+
+---
+
+## JavaScript Functionality
+
+* **Menu Toggle:** Opens and closes navigation menu on smaller screens.
+* **Cart Toggle:** Displays shopping cart items overlay.
+* **Search Box:** Allows users to type and search (demo behavior).
+* **Interactive Buttons:** Hover and click effects for user engagement.
+
+---
+
+## Design Highlights
+
+* Fully **responsive** — adapts to different screen sizes (desktop, tablet, mobile).
+* Uses **flexbox and grid layout** for structured responsiveness.
+* **Consistent theme** — shades of brown and cream for a warm café aesthetic.
+* **Reusability** — sections can be easily customized for any café or restaurant brand.
+
+---
+
+## Future Improvements
+
+* Add a backend (Node.js / Firebase) for dynamic product loading and cart persistence.
+* Integrate an order form and real checkout page.
+* Add animations using CSS keyframes or libraries like AOS or GSAP.
+* Include customer login and registration features.
+* Deploy to GitHub Pages or Netlify for public access.
+
+---
+
+## Credits
+
+* Icons: [Font Awesome](https://fontawesome.com/)
+* Map: [Google Maps Embed API](https://developers.google.com/maps/documentation/embed)
+* Images: Unsplash / Pixabay (replace with proper assets for deployment)
 
 ---
 
